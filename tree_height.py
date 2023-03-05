@@ -18,8 +18,23 @@ def process_tree(start_index, nodes):
 
 
 def main():
-    # amount = input()
-    tree = input().split(" ")
+    choice  = input()
+
+    if "F" in choice:
+        filename = input()
+        useFile = filename + '.txt'
+        file1 = open(useFile, 'r')
+        Lines = file1.readlines()
+
+        amount = Lines[0]
+        tree = Lines[1]
+
+    elif "I" in choice:
+
+        amount = input()
+        tree = input()
+
+    tree = tree.split(" ")
     tree = [int(i) for i in tree]
     start_index = 0
 
