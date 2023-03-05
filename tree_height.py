@@ -1,5 +1,6 @@
 import sys
 import threading
+import numpy as np
 
 
 def process_tree(start_index, nodes):
@@ -7,10 +8,9 @@ def process_tree(start_index, nodes):
     aaa = []
 
     l = 0
-    for i in nodes:
-        if i == start_index:
-            aaa.append(l)
-        l = l + 1
+    np_array = np.array(nodes)
+
+    aaa = np.where(np_array == start_index)[0]
 
     if len(aaa) == 0:
         return 1
@@ -26,12 +26,16 @@ def main():
 
     if "F" in choice:
         filename = input()
-        useFile = 'test/' + filename
-        file1 = open(useFile, 'r')
-        Lines = file1.readlines()
 
-        amount = Lines[0]
-        tree = Lines[1]
+        if "a" in filename:
+            print("Wrong file used")
+        else:
+            useFile = 'test/' + filename
+            file1 = open(useFile, 'r')
+            Lines = file1.readlines()
+
+            amount = Lines[0]
+            tree = Lines[1]
 
     elif "I" in choice:
 
