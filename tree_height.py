@@ -8,9 +8,11 @@ def process_tree(start_index, nodes):
     aaa = []
 
     l = 0
-    np_array = np.array(nodes)
+    # np_array = np.array(nodes)
 
-    aaa = np.where(np_array == start_index)[0]
+    # aaa = np.where(np_array == start_index)[0]
+
+    aaa = [i for i, e in enumerate(nodes) if e == start_index]
 
     if len(aaa) == 0:
         return 1
