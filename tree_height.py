@@ -22,7 +22,7 @@ def main():
 
     if "F" in choice:
         filename = input()
-        useFile = filename
+        useFile = 'test\\' + filename
         file1 = open(useFile, 'r')
         Lines = file1.readlines()
 
