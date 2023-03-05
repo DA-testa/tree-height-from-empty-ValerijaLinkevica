@@ -18,7 +18,7 @@ def process_tree(start_index, nodes):
 
 
 def main():
-    amount = input()
+    # amount = input()
     tree = input().split(" ")
     tree = [int(i) for i in tree]
     start_index = 0
