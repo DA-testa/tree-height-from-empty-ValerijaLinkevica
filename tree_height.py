@@ -58,8 +58,6 @@ def main():
 
     zzz = process_tree(start_index, tree)
 
-    print(tree)
-
     print(zzz)
 
 
