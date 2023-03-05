@@ -1,3 +1,7 @@
+import sys
+import threading
+
+
 def process_tree(start_index, nodes):
     zzz = 0
     aaa = []
@@ -55,6 +59,8 @@ def main():
     print(zzz)
 
 
-if __name__ == '__main__':
-    main()
+sys.setrecursionlimit(10**7)  # max depth of recursion
+threading.stack_size(2**27)   # new thread will get stack of such size
+threading.Thread(target=main).start()
+main()
     
