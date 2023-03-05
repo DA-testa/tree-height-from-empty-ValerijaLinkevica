@@ -8,7 +8,7 @@ def process_tree(start_index, nodes):
             aaa.append(l)
         l = l + 1
 
-    if aaa.count == 0:
+    if len(aaa) == 0:
         return 1
 
     for k in aaa:
@@ -40,3 +40,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
