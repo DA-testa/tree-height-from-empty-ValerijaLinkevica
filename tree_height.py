@@ -37,6 +37,7 @@ def main():
     amount = input()
     tree = input().split(" ")
     tree = [int(i) for i in tree]
+    start_index = 0
 
     c = 0
     for a in tree:
